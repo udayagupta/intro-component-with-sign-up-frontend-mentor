@@ -18,14 +18,16 @@ form.addEventListener('submit', (event)=> {
 
     if (firstName.value.trim() === "") {
         isValid = false;
+        firstName.nextElementSibling.style.display = "block"
         firstName.style.border = " 2px solid hsl(0, 100%, 74%)";
         errors[0].style.display = "block";
-        
+
     }
 
     if (lastName.value.trim() === "") {
         isValid = false;
         lastName.style.border = " 2px solid hsl(0, 100%, 74%)";
+        lastName.nextElementSibling.style.display = "block"
         errors[1].style.display = "block";
 
     }
@@ -33,6 +35,7 @@ form.addEventListener('submit', (event)=> {
     if (!isValidEmail(email.value.trim())) {
         isValid = false;
         email.style.border = " 2px solid hsl(0, 100%, 74%)";
+        email.nextElementSibling.style.display = "block"
         errors[2].style.display = "block";
 
     }
@@ -40,6 +43,7 @@ form.addEventListener('submit', (event)=> {
     if (password.value.trim() === "") {
         isValid = false;
         password.style.border = " 2px solid hsl(0, 100%, 74%)";
+        password.nextElementSibling.style.display = "block"
         errors[3].style.display = "block";
         
     }
